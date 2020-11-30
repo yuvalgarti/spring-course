@@ -1,6 +1,7 @@
 package app.entities;
 
 import app.annotations.BasicAuthorization;
+import app.annotations.BasicMeasurement;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -15,8 +16,8 @@ import org.springframework.stereotype.Component;
 public class Account {
     private String number;
 
-    @Getter(onMethod_ = {@BasicAuthorization(policyName = "SECRET")})
-    @Setter(onMethod_ = {@BasicAuthorization})
+    @Getter(onMethod_ = {@BasicAuthorization(policyName = "SECRET"), @BasicMeasurement})
+    @Setter(onMethod_ = {@BasicAuthorization, @BasicMeasurement})
     private double balance;
     private double overdraftCap;
     private double overdraftInterest;

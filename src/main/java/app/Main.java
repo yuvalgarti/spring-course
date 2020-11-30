@@ -25,6 +25,7 @@ public class Main {
         System.out.println(address);
 
         Account account = context.getBean(Account.class);
+        account.setBalance(100.25);
         System.out.println(account.getBalance());
 
         context.close();
