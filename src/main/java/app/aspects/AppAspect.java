@@ -29,7 +29,8 @@ public class AppAspect {
     public Object logAroundAllMethods(ProceedingJoinPoint joinPoint) throws Throwable {
         long start = System.nanoTime();
         Object result = joinPoint.proceed();
-        System.out.println("execution of " + joinPoint.getSignature().toShortString() + " took: " + (System.nanoTime() - start) + " nano seconds");
+        System.out.println("execution of " + joinPoint.getSignature().toShortString() +
+                " took: " + (System.nanoTime() - start) + " nano seconds");
         return result;
     }
 }
