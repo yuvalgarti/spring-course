@@ -1,5 +1,6 @@
 package app;
 
+import app.entities.Account;
 import app.entities.Address;
 import app.entities.Customer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -22,6 +23,9 @@ public class Main {
         address.setAddress2("NewAdd2");
         System.out.println(customerYuval);
         System.out.println(address);
+
+        Account account = context.getBean(Account.class);
+        System.out.println(account.getBalance());
 
         context.close();
     }

@@ -2,13 +2,11 @@ package app;
 
 import app.entities.Address;
 import app.entities.Customer;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 @Configuration
 @ComponentScan("app")
+@EnableAspectJAutoProxy
 public class Config {
     @Scope("prototype")
     @Bean

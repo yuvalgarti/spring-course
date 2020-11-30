@@ -1,5 +1,6 @@
 package app.entities;
 
+import app.annotations.SampleAnnotation;
 import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
@@ -17,6 +18,7 @@ import javax.annotation.PreDestroy;
 @Scope("prototype")
 @Component
 @Primary
+@SampleAnnotation
 public class Customer {
     private String firstName;
     private String lastName;
